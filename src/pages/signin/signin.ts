@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-// import { RoomPage } from  '../room/room';
+import { RoomPage } from  '../room/room';
 
 
 @IonicPage()
