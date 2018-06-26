@@ -54,6 +54,22 @@ export class HomePage {
     this.data.message = '';
   }
 
+  exitChat() {
+    let exitData = firebase.database().ref('chatrooms/'+this.roomkey+'/chats').push();
+    exitData.set({
+      type:'exit',
+      user:this.nickname,
+      message:this.nickname+' has exited this room.',
+      sendDate:Date()
+    });
+  
+    this.offStatus = true;
+  
+    this.navCtrl.setRoot(RoomPage, {
+      nickname:this.nickname
+    });
+  }
+
 
 
   }
