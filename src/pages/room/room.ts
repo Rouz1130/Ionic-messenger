@@ -11,7 +11,6 @@ import * as firebase from 'Firebase';
   templateUrl: 'room.html',
 })
 export class RoomPage {
-
   rooms = [];
   ref = firebase.database().ref('chatrooms/');
 
@@ -22,11 +21,21 @@ export class RoomPage {
     });
   }
 
+  addRoom() {
+    this.navCtrl.push(AddRoomPage);
+  }
+
+  joinRoom(key) {
+    this.navCtrl.setRoot(HomePage, {
+      key:key,
+      nickname:this.navParams.get("nickname")
+    });
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad RoomPage');
   }
 }
-
   export const snapshotToArray = snapshot => {
     let returnArr = [];
 
