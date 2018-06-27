@@ -4,21 +4,21 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import * as firebase from 'firebase';
 
-import { HomePage } from '../pages/home/home';
+import { SigninPage } from '../pages/signin/signin';
 
 const config = {
-  apiKey: 'YOUR_APIKEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  databaseURL: 'YOUR_DATABASE_URL',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_STORAGE_BUCKET',
+  apiKey:"AIzaSyAE8vi8Q6k5eT3KW8TvSlSmBsCdIan3lOQ",
+  authDomain: "geotracker-7a667.firebaseapp.com",
+  databaseURL: "https://geotracker-7a667.firebaseio.com",
+  projectId: "geotracker-7a667",
+  storageBucket: "geotracker-7a667.appspot.com",
 };
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = SigninPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
